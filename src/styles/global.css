@@ -1,0 +1,81 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body, #app {
+  height: 100%;
+  width: 100%;
+  /* 原为 overflow:hidden，会把 MindMapView/EditorView 的所有滚动内容整体裁掉 */
+  overflow: auto;
+}
+
+body {
+  font-family: 'Source Serif Pro', Georgia, serif;
+  /* 保底背景色 —— 即使 CSS 变量加载失败，也不会是纯白 */
+  background-color: #FDF8F3;
+  background-color: var(--bg-primary, #FDF8F3);
+  color: #2B2B2B;
+  color: var(--text-primary, #2B2B2B);
+  font-size: 16px;
+  line-height: 1.6;
+  transition: background-color 0.25s ease, color 0.25s ease;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+::selection {
+  background-color: #2C5F4D;
+  background-color: var(--accent-primary, #2C5F4D);
+  color: #FFFFFF;
+  color: var(--bg-tertiary, #FFFFFF);
+}
+
+/* 滚动条样式 */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #D4C4B2;
+  background: var(--border-color, #D4C4B2);
+  border-radius: 4px;
+  transition: background 0.15s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #D4C4B2;
+  background: var(--border-hover, #D4C4B2);
+}
+
+textarea {
+  font-family: inherit;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+  background: none;
+  color: inherit;
+}
+
+input[type="file"] {
+  display: none;
+}
+
+/* 兜底：让代码里用到的 data-theme 即使未设置也有默认 light 行为 */
+html:not([data-theme]) {
+  color-scheme: light;
+}
+html[data-theme="dark"] {
+  color-scheme: dark;
+}

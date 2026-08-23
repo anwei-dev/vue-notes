@@ -1,0 +1,71 @@
+:root {
+  /* 颜色 - 浅色主题 */
+  --bg-primary: #FDF8F3;
+  --bg-secondary: #F5EDE4;
+  --bg-tertiary: #FFFFFF;
+  --bg-toolbar: #FBF3EA;
+  --accent-primary: #2C5F4D;
+  --accent-primary-hover: #1F4538;
+  --accent-secondary: #B8860B;
+  --accent-secondary-hover: #A07509;
+  --text-primary: #2B2B2B;
+  --text-secondary: #5A5A5A;
+  --text-tertiary: #8A8A8A;
+  --border-color: #E8DDD1;
+  --border-hover: #D4C4B2;
+  --shadow-soft: 0 2px 12px rgba(44, 95, 77, 0.08);
+  --shadow-hover: 0 4px 20px rgba(44, 95, 77, 0.14);
+  --code-bg: #F5F1EC;
+  --code-text: #3C3C3C;
+
+  /* 颜色 - 预生成半透明版（兼容不支持 color-mix 的浏览器，替代 color-mix） */
+  --bg-primary-alpha-85: rgba(253, 248, 243, 0.85);
+  --accent-primary-alpha-08: rgba(44, 95, 77, 0.08);
+  --accent-primary-alpha-10: rgba(44, 95, 77, 0.10);
+  --accent-primary-alpha-18: rgba(44, 95, 77, 0.18);
+  --text-tertiary-alpha-22: rgba(138, 138, 138, 0.22);
+
+  /* 字体 */
+  --font-display: 'Playfair Display', 'Source Serif Pro', Georgia, serif;
+  --font-body: 'Source Serif Pro', Georgia, serif;
+  --font-mono: 'JetBrains Mono', 'SF Mono', Consolas, monospace;
+
+  /* 尺寸 */
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 14px;
+  --toolbar-height: 58px;
+  --statusbar-height: 36px;
+
+  /* 过渡 */
+  --transition-fast: 0.15s ease;
+  --transition-normal: 0.25s ease;
+  --transition-slow: 0.4s ease;
+}
+
+[data-theme="dark"] {
+  --bg-primary: #1A1F1D;
+  --bg-secondary: #242B28;
+  --bg-tertiary: #2E3733;
+  --bg-toolbar: #222926;
+  --accent-primary: #6AAF92;
+  --accent-primary-hover: #86C2A7;
+  --accent-secondary: #D4A843;
+  --accent-secondary-hover: #E0B85A;
+  --text-primary: #E8E4DD;
+  --text-secondary: #B8B2A8;
+  --text-tertiary: #8A857E;
+  --border-color: #3A433F;
+  --border-hover: #4F5A55;
+  --shadow-soft: 0 2px 12px rgba(0, 0, 0, 0.3);
+  --shadow-hover: 0 4px 20px rgba(0, 0, 0, 0.5);
+  --code-bg: #2A312E;
+  --code-text: #D8D2C7;
+
+  /* 颜色 - 预生成半透明版（深色主题） */
+  --bg-primary-alpha-85: rgba(26, 31, 29, 0.85);
+  --accent-primary-alpha-08: rgba(106, 175, 146, 0.08);
+  --accent-primary-alpha-10: rgba(106, 175, 146, 0.10);
+  --accent-primary-alpha-18: rgba(106, 175, 146, 0.18);
+  --text-tertiary-alpha-22: rgba(138, 133, 126, 0.22);
+}
